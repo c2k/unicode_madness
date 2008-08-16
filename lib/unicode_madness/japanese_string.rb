@@ -121,7 +121,7 @@ class JapaneseString < UnicodeString
         new_str += ch
       end
     end
-    new_str
+    self.class.new(new_str)
   end
   
   # Returns a new string with this string's voiced hiragana and katakana
@@ -135,7 +135,7 @@ class JapaneseString < UnicodeString
         new_str += ch
       end
     end
-    new_str
+    self.class.new(new_str)
   end
   
   # Returns a new string with this string's unvoiced hiragana and katakana
@@ -149,7 +149,7 @@ class JapaneseString < UnicodeString
         new_str += ch
       end
     end
-    new_str
+    self.class.new(new_str)
   end
   
   # Creates a new string by romanizing the kana in this string. Full-width
