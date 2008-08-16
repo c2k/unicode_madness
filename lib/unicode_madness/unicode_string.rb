@@ -91,7 +91,7 @@ class UnicodeString < String
   # length of the string.
   def uindex_to_index(char_index)
     return nil if char_index.nil?
-    if char_index < 0 || char_index > ulength
+    if char_index < 0 || char_index > jlength
       raise RangeError, 'index out of range'
     end
     
