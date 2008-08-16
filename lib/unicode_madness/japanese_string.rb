@@ -115,8 +115,8 @@ class JapaneseString < UnicodeString
   def to_hiragana
     new_str = ''
     split('').each do |ch|
-      if Unicode::KATAKANA_TO_HIRAGANA.has_key?(ch)
-        new_str += Unicode::KATAKANA_TO_HIRAGANA[ch]
+      if KATAKANA_TO_HIRAGANA.has_key?(ch)
+        new_str += KATAKANA_TO_HIRAGANA[ch]
       else
         new_str += ch
       end
@@ -129,8 +129,8 @@ class JapaneseString < UnicodeString
   def unvoice_kana
     new_str = ''
     split('').each do |ch|
-      if Unicode::UNVOICED_KANA.has_key?(ch)
-        new_str += Unicode::UNVOICED_KANA[ch]
+      if UNVOICED_KANA.has_key?(ch)
+        new_str += UNVOICED_KANA[ch]
       else
         new_str += ch
       end
@@ -143,8 +143,8 @@ class JapaneseString < UnicodeString
   def voice_kana
     new_str = ''
     split('').each do |ch|
-      if Unicode::VOICED_KANA.has_key?(ch)
-        new_str += Unicode::VOICED_KANA[ch]
+      if VOICED_KANA.has_key?(ch)
+        new_str += VOICED_KANA[ch]
       else
         new_str += ch
       end
